@@ -6,8 +6,27 @@
   - `npm run test-palindrome`
 */
 
+
+
 function isPalindrome(str) {
+  
+  let str1 = str.toLowerCase()
+  let arr = str1.split("")
+
+  let i = 0;
+  let j = str.length - 1;
+  
+  while(i < j){
+    if(arr[i] > 'a' && arr[j])arr[i] === arr[j]){
+      i++;
+      j--;
+    }else{
+      return false;
+    }
+  }
+
   return true;
+  
 }
 
 module.exports = isPalindrome;

@@ -8,6 +8,7 @@
 
 
 
+
 function isPalindrome(str) {
   
   let str1 = str.toLowerCase()
@@ -17,7 +18,7 @@ function isPalindrome(str) {
   let j = str.length - 1;
   
   while(i < j){
-    if(arr[i] > 'a' && arr[j])arr[i] === arr[j]){
+    if(arr[i] > 'a' && arr[j] arr[i] === arr[j]){
       i++;
       j--;
     }else{
@@ -28,5 +29,14 @@ function isPalindrome(str) {
   return true;
   
 }
+
+
+
+
+
+
+
+
+
 
 module.exports = isPalindrome;

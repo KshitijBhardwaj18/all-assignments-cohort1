@@ -12,11 +12,17 @@ function calculateTotalSpentByCategory(transactions) {
   let ans = [];
 
   for (let i = 0; i < transactions.length; i++) {
-    if(ans.some(obj => obj.category === transactions[i].category )){
-      ans.push({category : `${transactions[i].category}`, totalSpent: `${transactions[i].price}`});
+    const categoryIndex = ans.findIndex(obj => obj.category === transactions[i].category);
+
+    if (categoryIndex !== -1) {
+      // Category already exists, add the current transaction's price to totalSpent
+      ans[categoryIndex].totalSpent += transactions[i].price;
+    } else {
+      // Category doesn't exist, add a new object to the array
+      ans.push({ category: transactions[i].category, totalSpent: transactions[i].price });
     }
-    
   }
+
   return ans;
 }
 

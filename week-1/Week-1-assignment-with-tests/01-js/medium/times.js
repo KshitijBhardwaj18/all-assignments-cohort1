@@ -7,6 +7,21 @@ Try running it for
 Hint - use Date class exposed in JS
 */
 
+
 function calculateTime(n) {
-    return 0.01;
+
+  let sum = 0;
+
+  for(int i = 0; i < n; i++){
+
+    const currentDate = new Date();
+    
+
+
+  }
+
+  
+  
+  return 0.01;
+
 }
